@@ -22,4 +22,7 @@ func main() {
 	var ages = []int{20, 25, 30}
 	fmt.Println(ages[0])
 	ages = append(ages, 85)
+
+	rangeOne := ages[1:3]
+	fmt.Println(rangeOne)
 }
