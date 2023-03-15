@@ -4,13 +4,16 @@ import (
 	"fmt"
 )
 
-func sayGreeting(n string) {
-	fmt.Printf("Hey welcome to narnia %v \n", n)
+func sayGreeting(n string) string {
+	return fmt.Sprintf("Hey welcome to narnia %v \n", n)
 }
-func cycleNames(n []string, f func(string)) {
+func cycleNames(n []string, f func(string) string) string {
+	str1 := ""
 	for _, value := range n {
-		f(value)
+		s := f(value)
+		str1 += s
 	}
+	return str1
 
 }
 func main() {
