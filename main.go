@@ -5,7 +5,7 @@ import (
 )
 
 func sayGreeting(n string) string {
-	return fmt.Sprintf("Hey welcome to narnia %v \n", n)
+	return fmt.Sprintf("Hey welcome to narnia %v", n)
 }
 func cycleNames(n []string, f func(string) string) string {
 	str1 := ""
@@ -20,6 +20,7 @@ func main() {
 	sayGreeting("hello")
 
 	strings := []string{"Hello", "How", "Are", "You"}
-	cycleNames(strings, sayGreeting)
+	rtVal := cycleNames(strings, sayGreeting)
+	println(rtVal)
 
 }
