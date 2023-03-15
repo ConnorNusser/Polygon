@@ -19,6 +19,7 @@ func main() {
 	fmt.Println(ageOne, ageTwo, ageThree)
 
 	//bits & memory
-	var ages [3]int = [3]int{20, 25, 30}
+	var ages = []int{20, 25, 30}
 	fmt.Println(ages[0])
+	ages = append(ages, 85)
 }
