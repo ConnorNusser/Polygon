@@ -17,10 +17,21 @@ func getInitials(name string) (string, string) {
 	if len(strArr) > 1 {
 		return strArr[0], strArr[1]
 	}
-	return "", ""
+	return strArr[0], ""
+}
+
+func returnStrings(n string, f func(string) (string, string)) (string, string) {
+	return f(n)
+
 }
 func main() {
-	init, init2 := getInitials("Connor Nusser")
-	println(init)
+	init1, init2 := returnStrings("Connor Nusser", getInitials)
+	println(init1)
+	println(init2)
+	init1, init2 = returnStrings("Connor Busser", getInitials)
+	println(init1)
+	println(init2)
+	init1, init2 = returnStrings("Connousser", getInitials)
+	println(init1)
 	println(init2)
 }
